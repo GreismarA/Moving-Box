@@ -5,7 +5,7 @@ const NewBoxForm = () => {
   const initialState = {
     nombre: '',
     color: '',
-    contenido: '',
+    contenido: [],
     items: 0,
     media: '',
     ubicacion: '',
@@ -20,23 +20,31 @@ const NewBoxForm = () => {
 
 
 
-
   const handleOnChange = e => {
     const { name, value } = e.target;
     setData({...data, [name]: value})
   }
 
+  const handleOnChangeCheck = (e) => {
+    const { checked, value } = e.target;
+    if (checked) {
+      setData({
+        ...data,
+        contenido: [...data.contenido, value]
+      });
+    } else {
+      setData({
+        ...data,
+        contenido: data.contenido.filter((checkbox) => checkbox !== value),
+      });
+    }
+  };
+
   const handleSubmit = async e => {
     e.preventDefault();
-    try {
-  
-    } catch (error) {
-      
-    }
   }
 
   return (
-
     <form>
       {/* nombre de la caja */}
       <div >
@@ -54,9 +62,14 @@ const NewBoxForm = () => {
 
        {/* Contenido */}
       <div>
-        <label htmlFor="contenido">Contenido de la caja</label>
-        <input onChange={handleOnChange} name="contenido" type="text" id="contenido" />
-        
+        <div>
+          <label htmlFor="ropa">Ropa</label>
+          <input type="checkbox" name="ropa" id="ropa" value="Ropa" onChange={handleOnChangeCheck} />
+        </div>
+        <div>
+          <label htmlFor="calzado">Calzado</label>
+          <input type="checkbox" name="calzado" id="calzado" value="Calzado" onChange={handleOnChangeCheck} />
+        </div>
       </div>
 
       {/* numero de items */}
