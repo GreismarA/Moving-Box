@@ -1,4 +1,6 @@
+import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
+import { db } from "../firebase/firebase";
 
 const NewBoxForm = () => {
 
@@ -17,15 +19,12 @@ const NewBoxForm = () => {
 
   const [data, setData] = useState(initialState)
 
-
-
-
   const handleOnChange = e => {
     const { name, value } = e.target;
     setData({...data, [name]: value})
   }
 
-  const handleOnChangeCheck = (e) => {
+  const handleOnChangeCheck = e => {
     const { checked, value } = e.target;
     if (checked) {
       setData({
@@ -42,6 +41,12 @@ const NewBoxForm = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
+    try {
+      await addDoc(collection(db, 'boxes'), {...data})
+    } catch (error) {
+      console.error(error)
+    }
+
   }
 
   return (
@@ -69,6 +74,42 @@ const NewBoxForm = () => {
         <div>
           <label htmlFor="calzado">Calzado</label>
           <input type="checkbox" name="calzado" id="calzado" value="Calzado" onChange={handleOnChangeCheck} />
+        </div>
+        <div>
+          <label htmlFor="joyas">Joyas</label>
+          <input type="checkbox" name="joyas" id="joyas" value="Joyas" onChange={handleOnChangeCheck} />
+        </div>
+        <div>
+          <label htmlFor="electrodomesticos">Electrodomesticos</label>
+          <input type="checkbox" name="electrodomesticos" id="electrodomesticos" value="Electrodomesticos" onChange={handleOnChangeCheck} />
+        </div>
+        <div>
+          <label htmlFor="utenciliosDeBano">Utencilios de baño</label>
+          <input type="checkbox" name="utencilios-de-bano" id="utenciliosDeBano" value="Utencilios de baño" onChange={handleOnChangeCheck} />
+        </div>
+        <div>
+          <label htmlFor="utencilios-de-limpieza">Utencilios de limpieza</label>
+          <input type="checkbox" name="utencilios-de-limpieza" id="utenciliosDeBimpieza" value="Utencilios de limpieza" onChange={handleOnChangeCheck} />
+        </div>
+        <div>
+          <label htmlFor="utenciliosDeCocina">Utencilios de cocina</label>
+          <input type="checkbox" name="utenciliosDeCocina" id="utenciliosDeCocina" value="Utencilios de cocina" onChange={handleOnChangeCheck} />
+        </div>
+        <div>
+          <label htmlFor="herramientas">Herramientas</label>
+          <input type="checkbox" name="herramientas" id="herramientas" value="Herramientas" onChange={handleOnChangeCheck} />
+        </div>
+        <div>
+          <label htmlFor="comida">Comida</label>
+          <input type="checkbox" name="comida" id="comida" value="Comida" onChange={handleOnChangeCheck} />
+        </div>
+        <div>
+          <label htmlFor="juguetes">Juguetes</label>
+          <input type="checkbox" name="juguetes" id="juguetes" value="Juguetes" onChange={handleOnChangeCheck} />
+        </div>
+        <div>
+          <label htmlFor="">Juguetes</label>
+          <input type="checkbox" name="" id="" value="Juguetes" onChange={handleOnChangeCheck} />
         </div>
       </div>
 
