@@ -5,7 +5,6 @@ function BoxDetails() {
         <section className="flex flex-col items-center lg:h-screen">
             <div className="containerBoxDetails px-4 mt-8 pt-4 pb-8 lg:px-8">
                 <h1 className="text-center text-2xl md:text-4xl font-semibold">Nombre de la Caja</h1>
-                <hr />
                 <ol className="md:py-8 flex flex-col gap-2">
                     <li className="flex flex-col md:flex-row"><p className="font-semibold">Nombre:</p><p>Value</p></li>
                     <li className="flex flex-col md:flex-row"><p className="font-semibold">Color:</p><p>Value</p></li>

@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { Menu } from "./Menu.jsx"
+import Menu from "./Menu.jsx"
 import "./Nav.css"
 
-function Navbar(){
+function Nav(){
     const [isOpen, setIsOpen] = useState(false);
     const [equis, setEquis] = useState(false);
 
@@ -11,10 +11,6 @@ function Navbar(){
       setEquis(!equis);
   };
  
-
-
-   
-
     return(
         <>
             <nav className="nav fixed top-0 left-0 w-full z-10">
@@ -29,9 +25,7 @@ function Navbar(){
                     <a href="#proceso">
                         <Menu>Proceso</Menu>
                     </a>
-
                     <a href="#crear">
-
                         <Menu>Crear caja</Menu>
                     </a>
                 </div>
@@ -45,4 +39,4 @@ function Navbar(){
     )
 }
 
-export {Navbar}
+export default Nav;
