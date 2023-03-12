@@ -1,37 +1,42 @@
 import "../resources/boxDetails.css"
 
-function BoxDetails(){
+function BoxDetails() {
     return (
-        <section className="section">
-            <div className="containerBoxDetails">
-                <h1 className="nameBox">Name Box</h1>
+        <section className="flex flex-col items-center lg:h-screen">
+            <div className="containerBoxDetails px-4 mt-8 pt-4 pb-8 lg:px-8">
+                <h1 className="text-center text-2xl md:text-4xl font-semibold">Nombre de la Caja</h1>
                 <hr />
-                <ol>
-                    <li><p>Name:</p><p>Value</p></li>
-                    <li><p>Color:</p><p>Value</p></li>
-                    <li><p>Content:</p><p>Value</p></li>
-                    <li><p>Items:</p><p>Value</p></li>
-                    <li><p>Media:</p><p>Value</p></li>
-                    <li><p>Ubication:</p><p>Value</p></li>
-                    <li><p>Weidth:</p><p>Value</p></li>
-                    <li><p>Owner:</p><p>Value</p></li>
-                    <li><p>Type of Content:</p><p>Value</p></li>
-                    <li><p>Note:</p><p>Value</p></li>
+                <ol className="md:py-8 flex flex-col gap-2">
+                    <li className="flex flex-col md:flex-row"><p className="font-semibold">Nombre:</p><p>Value</p></li>
+                    <li className="flex flex-col md:flex-row"><p className="font-semibold">Color:</p><p>Value</p></li>
+                    <li className="flex flex-col md:flex-row"><p className="font-semibold">Contentido:</p><p>Value</p></li>
+                    <li className="flex flex-col md:flex-row"><p className="font-semibold">Items:</p><p>Value</p></li>
+                    <li className="flex flex-col md:flex-row"><p className="font-semibold">Media:</p><p>Value</p></li>
+                </ol>
+            </div>
+            <div className="flex justify-center">
+                <button type='text' className="rounded-btn h-24 w-24 text-5xl">.</button>
+            </div>
+            <div className="containerBoxDetails px-4 py-8 lg:pt-4 lg:px-8">
+                <ol className="md:py-8 flex flex-col gap-2">
+                    <li className="flex flex-col md:flex-row"><p className="font-semibold">Ubicación:</p><p>Value</p></li>
+                    <li className="flex flex-col md:flex-row"><p className="font-semibold">Peso:</p><p>Value</p></li>
+                    <li className="flex flex-col md:flex-row"><p className="font-semibold">Propietario:</p><p>Value</p></li>
+                    <li className="flex flex-col md:flex-row"><p className="font-semibold">Tipo de contenido:</p><p>Value</p></li>
+                    <li className="flex flex-col md:flex-row"><p className="font-semibold">Nota:</p><p>Value</p></li>
                 </ol>
                 <hr />
-                <div className="containerMedia">
-                    <div className="media">image</div>
-                    <div className="media">image</div>
-                    <div className="media">image</div>
-                    <div className="media">image</div>
-                    <div className="media">image</div>
-                </div>
-                <div className="containerMedia">
-                    <div className="media">image</div>
-                    <div className="media">image</div>
-                    <div className="media">image</div>
-                    <div className="media">image</div>
-                    <div className="media">image</div>
+                <div className="grid grid-cols-3 md:grid-cols-5 gap-4 py-4 text-center text-white text-xs">
+                    <div className="rounded-md p-4 md:p-4 md:py-8 bg-black">image</div>
+                    <div className="rounded-md p-4 md:p-4 md:py-8 bg-black">image</div>
+                    <div className="rounded-md p-4 md:p-4 md:py-8 bg-black">image</div>
+                    <div className="rounded-md p-4 md:p-4 md:py-8 bg-black">image</div>
+                    <div className="rounded-md p-4 md:p-4 md:py-8 bg-black">image</div>
+                    <div className="rounded-md p-4 md:p-4 md:py-8 bg-black">image</div>
+                    <div className="rounded-md p-4 md:p-4 md:py-8 bg-black">image</div>
+                    <div className="rounded-md p-4 md:p-4 md:py-8 bg-black">image</div>
+                    <div className="rounded-md p-4 md:p-4 md:py-8 bg-black">image</div>
+                    <div className="rounded-md p-4 md:p-4 md:py-8 bg-black">image</div>
                 </div>
             </div>
         </section>
