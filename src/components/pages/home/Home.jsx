@@ -1,8 +1,9 @@
-import './Home.css'
-import cajas from '../../../img/cajas.png'
+import './Home.css';
+import cajas from '../../../img/cajas.png';
 import CtaButton from '../home/ctaButton/CtaButton';
-import Steps from '../home/steps/Steps'
-import Footer from '../home/footer/Footer'
+import Steps from '../home/steps/Steps';
+import CallToAction from './buttonAction/CallToAction';
+import Footer from '../home/footer/Footer';
 
 function Home() {
 
@@ -19,6 +20,7 @@ function Home() {
         </div>
       </section>
       <Steps></Steps>
+      <CallToAction></CallToAction>
       <Footer></Footer>
     </>
   )
