@@ -53,7 +53,7 @@ const NewBoxForm = () => {
     <form>
       {/* nombre de la caja */}
       <div >
-        <label htmlFor="nombre" >Descripcion</label>
+        <label htmlFor="nombre" >Descripcion </label>
         <input onChange={handleOnChange} name="nombre" id="nombre" type="text"/>
         
       </div>

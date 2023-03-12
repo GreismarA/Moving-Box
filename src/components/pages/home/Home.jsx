@@ -1,14 +1,18 @@
-import './Home.css'
-import cajas from '../../../img/cajas.png'
+import './Home.css';
+import cajas from '../../../img/cajas.png';
 import CtaButton from '../home/ctaButton/CtaButton';
-import Steps from '../home/steps/Steps'
-import Footer from '../home/footer/Footer'
+import Steps from '../home/steps/Steps';
+import CallToAction from './buttonAction/CallToAction';
+import Footer from '../home/footer/Footer';
+import Nav from './nav/Nav';
+import About from './about/About';
 
 function Home() {
 
   return (
     <>
-      <section id='inicio' className='py-14'>
+    <Nav></Nav>
+      <section id='inicio' className='py-36'>
         <div className='flex flex-col justify-center items-center md:flex-row'>
           <div className='px-8 text-center md:w-4/6 md:text-left lg:w6/12 xl:w-6/12'>
             <h1 className='title pb-8 text-4xl md:text-4xl lg:text-5xl'>Servicio de control del contenido de tus cajas</h1>
@@ -18,7 +22,9 @@ function Home() {
           <div><img src={cajas} alt="Cajas" /></div>
         </div>
       </section>
+      <About></About>
       <Steps></Steps>
+      <CallToAction></CallToAction>
       <Footer></Footer>
     </>
   )
