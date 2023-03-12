@@ -4,11 +4,14 @@ import CtaButton from '../home/ctaButton/CtaButton';
 import Steps from '../home/steps/Steps';
 import CallToAction from './buttonAction/CallToAction';
 import Footer from '../home/footer/Footer';
+import { Navbar } from './nav/Nav';
+import { About } from '../../../component/About/About';
 
 function Home() {
 
   return (
     <>
+    <Navbar></Navbar>
       <section id='inicio' className='py-14'>
         <div className='flex flex-col justify-center items-center md:flex-row'>
           <div className='px-8 text-center md:w-4/6 md:text-left lg:w6/12 xl:w-6/12'>
@@ -19,6 +22,8 @@ function Home() {
           <div><img src={cajas} alt="Cajas" /></div>
         </div>
       </section>
+      <About></About>
+      
       <Steps></Steps>
       <CallToAction></CallToAction>
       <Footer></Footer>

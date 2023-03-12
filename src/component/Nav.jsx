@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { Menu } from "./Menu.jsx"
-import "./Nav.css"
+import { Menu } from "./Menu"
+import "../style/Nav.css"
 
 function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ function Navbar(){
   };
  
 
-
+ 
    
 
     return(
@@ -26,11 +26,11 @@ function Navbar(){
                     <a href="#nosotros">
                         <Menu>Sobre nosotros</Menu>
                     </a>
-                    <a href="#proceso">
+                    <a href="#contacto">
                         <Menu>Proceso</Menu>
                     </a>
 
-                    <a href="#crear">
+                    <a href="#crear" >
 
                         <Menu>Crear caja</Menu>
                     </a>
