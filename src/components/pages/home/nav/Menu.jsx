@@ -6,4 +6,4 @@ function Menu({children}){
     )
 }
 
-export {Menu};
+export default Menu;

@@ -1,8 +1,17 @@
 import BoxDetails from "../components/BoxDetails";
+import NewBoxForm from "../components/NewBoxForm/NewBoxForm";
 
 function Box(){
     return (
-        <BoxDetails></BoxDetails>
+        <>
+
+       
+        < NewBoxForm></NewBoxForm>
+        
+
+            <BoxDetails></BoxDetails>
+
+        </>
     );
 };
 

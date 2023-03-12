@@ -10,7 +10,7 @@ function QRGenerator() {
 
   useEffect(() => {
     if (!imgRef.current) return;
-    QRCode.toDataURL('https://www.youtube.com/watch?v=-pGiI_r00K0')
+    QRCode.toDataURL(`http://localhost:5000/box`)
       .then((url) => {
         imgRef.current.src = url;
       })
