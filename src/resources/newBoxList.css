@@ -1,0 +1,38 @@
+*, * ::after, * ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.sectionList {
+    width: 100%;
+    height: 100vh;
+}
+
+.topBoxList {
+    width: 100%;
+    background-color: gray;
+}
+
+.BoxList {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(172,172,172);
+}
+
+.buttonCreateBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: gray;
+    border-radius: 99rem;
+    padding: 2rem 2rem;
+    font-size: 3rem;
+    line-height: 1.8rem;
+}

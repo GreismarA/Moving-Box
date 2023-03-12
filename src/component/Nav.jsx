@@ -11,6 +11,7 @@ function Navbar(){
       setEquis(!equis);
   };
  
+
   function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -36,7 +37,9 @@ function Navbar(){
                     <a href="#contacto">
                         <Menu>Proceso</Menu>
                     </a>
+
                     <a href="#crear" onClick={() => scrollToSection("seccion-1")}>
+
                         <Menu>Crear caja</Menu>
                     </a>
                 </div>
