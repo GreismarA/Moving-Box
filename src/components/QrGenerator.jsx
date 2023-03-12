@@ -4,13 +4,16 @@ import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import "../resources/qrGenerator.css"
 
-function QRGenerator() {
+function QRGenerator({id}) {
+
+  console.log(id)
+
   const imgRef = useRef(null);
   const [boxNumber, setBoxNumber] = useState(1);
 
   useEffect(() => {
     if (!imgRef.current) return;
-    QRCode.toDataURL(`http://localhost:5000/box`)
+    QRCode.toDataURL(`http://localhost:5000/box/${id}`)
       .then((url) => {
         imgRef.current.src = url;
       })

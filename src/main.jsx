@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<Home/>}></Route>
-      <Route path='/box' element={<Box/>}></Route>
+      <Route path='/box/:id' element={<Box/>}></Route>
       <Route path='/crear-caja' element={<NewBox />}></Route>
     </Routes>
   </BrowserRouter>  

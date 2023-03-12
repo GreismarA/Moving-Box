@@ -1,11 +1,13 @@
 import { addDoc, collection } from "firebase/firestore";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { db } from "../firebase/firebase";
 import QrGenerator from "./QrGenerator"
+import { v4 } from 'uuid';
 
 const NewBoxForm = () => {
 
   const initialState = {
+    boxId:  null,
     nombre: '',
     color: '',
     contenido: [],
@@ -20,6 +22,11 @@ const NewBoxForm = () => {
 
   const [data, setData] = useState(initialState)
   const [contenido, setContenido] = useState("")
+  const [showQr, setshowQr] = useState(false)
+
+  useEffect (() => {
+    setData({...data, boxId: v4()})
+  }, [])
 
   const handleOnChange = e => {
     const { name, value } = e.target;
@@ -47,16 +54,15 @@ const NewBoxForm = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    if (e.keyCode === 13) return
-
-    console.log(e)
-
+    setshowQr(true)
     try {
       await addDoc(collection(db, 'boxes'), {...data})
     } catch (error) {
       console.error(error)
     }
   }
+
+  
 
   return (
     <>
@@ -182,7 +188,7 @@ const NewBoxForm = () => {
         ))}
       </div>
     </form>
-    <QrGenerator></QrGenerator>
+    { showQr &&  <QrGenerator id={data.boxId} ></QrGenerator>}
     </>
   );
 }
