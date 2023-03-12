@@ -7,7 +7,7 @@ function CallToAction() {
     const navigate = useNavigate()
     
     const handleClickEmpzarBtn = () => {
-        navigate('/box')
+        navigate('/crear-caja')
     }
 
     return (

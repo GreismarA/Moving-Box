@@ -1,9 +1,9 @@
-import QrGenerator from "../components/QrGenerator";
+import NewBoxForm from "../components/NewBoxForm";
 
 const NewBox = () => {
   return (
     <>
-      <QrGenerator></QrGenerator> 
+      <NewBoxForm />
     </>
   )
 }
