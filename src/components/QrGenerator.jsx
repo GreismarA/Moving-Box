@@ -10,7 +10,7 @@ function QRGenerator() {
 
   useEffect(() => {
     if (!imgRef.current) return;
-    QRCode.toDataURL('https://www.youtube.com/watch?v=-pGiI_r00K0')
+    QRCode.toDataURL(`http://localhost:5000/box`)
       .then((url) => {
         imgRef.current.src = url;
       })
@@ -28,9 +28,9 @@ function QRGenerator() {
   };
 
   return (
-    <div className="container">
+    <div className="container py-14 mt-16">
       <img ref={imgRef}/>
-      <button onClick={downloadPdf}>Download QR Code</button>
+      <button onClick={downloadPdf} className="py-6 font-semibold">Download QR Code</button>
     </div>
   );
 }

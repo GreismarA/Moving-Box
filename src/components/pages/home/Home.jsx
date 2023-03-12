@@ -10,7 +10,10 @@ import About from './about/About';
 function Home() {
 
   return (
+
     <>
+
+    <div className='bg-black'>
     <Nav></Nav>
       <section id='inicio' className='py-36'>
         <div className='flex flex-col justify-center items-center md:flex-row'>
@@ -26,6 +29,7 @@ function Home() {
       <Steps></Steps>
       <CallToAction></CallToAction>
       <Footer></Footer>
+    </div>
     </>
   )
 }
