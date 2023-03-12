@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    gap: .5rem;
+    width: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container button{
+    border: 1px solid rgb(120, 120, 120);
+    background-color: rgb(200, 200, 200);
+    border-radius: .5rem;
+    width: 60%;
+    justify-items: center;
+}
+
+.container img {
+    width: 100%;
+    border: 1px solid rgb(120, 120, 120);
+    border-radius: .5rem;
+    padding: 0;
+}

@@ -1,6 +1,10 @@
+import QrGenerator from "../components/QrGenerator";
+
 const NewBox = () => {
   return (
-    <div>NewBox</div>
+    <>
+      <QrGenerator></QrGenerator> 
+    </>
   )
 }
-export default NewBox
+export default NewBox;
