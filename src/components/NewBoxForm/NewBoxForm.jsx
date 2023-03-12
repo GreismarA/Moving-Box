@@ -2,8 +2,8 @@ import "../NewBoxForm/NewBoxForm.css"
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
 
-import { db } from "../../firebase/firebase"
-import QrGenerator from "../QrGenerator"
+import { db } from "../firebase/firebase";
+import QrGenerator from "./QrGenerator"
 
 const NewBoxForm = () => {
 
@@ -62,14 +62,16 @@ const NewBoxForm = () => {
 
   return (
     <>
+
     
-    
-     <div className="bg-white p-20 " > 
+     
+      
+<div className="bg-white p-20 " > 
      <h2 className="font-[900] text-[40px] mb-4 text-black">Formulario</h2>
 
       <div className="bg-black w-full py-8 px-4   ">
 
-      <form className="lg:grid lg:grid-cols-2 gap-20">
+<form className="lg:grid lg:grid-cols-2 gap-20">
       {/* nombre de la caja */}
       <div>
         {/* nombre de la caja */}
@@ -200,7 +202,8 @@ const NewBoxForm = () => {
     </div>
     </div>
 
-    {/* <QrGenerator></QrGenerator> */}
+   
+    <QrGenerator></QrGenerator>
 
     </>
   );

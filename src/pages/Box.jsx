@@ -5,9 +5,13 @@ function Box(){
     return (
         <>
 
+
        
         < NewBoxForm></NewBoxForm>
         
+
+           
+
 
             <BoxDetails></BoxDetails>
 
