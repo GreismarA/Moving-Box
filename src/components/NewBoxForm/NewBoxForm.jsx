@@ -56,7 +56,7 @@ const NewBoxForm = () => {
     try {
       await addDoc(collection(db, 'boxes'), {...data})
     } catch (error) {
-      console.error(error)
+      console.error(error )
     }
   }
 
