@@ -1,0 +1,26 @@
+.img{background-image: url("../../assets/about.jpeg");
+background-position: top center;
+height: 500px;
+
+}
+
+.fondo{
+    background-color: #e2e75691;
+    height: 500px;
+}
+
+
+
+@media (min-width: 768px){
+    .img{
+       background-image: url("../../assets/about.jpeg");
+       background-position: right top;
+       
+    }
+    
+    .fondo{
+        background: linear-gradient(141deg, #e2e756 53%, transparent 53.5%);
+       
+    }
+    
+}
