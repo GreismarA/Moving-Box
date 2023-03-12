@@ -6,7 +6,7 @@ function CallToAction() {
         <>
             <section id="crear" className=" lg:grid grid-cols-[32%_68%]">
                 <div className="bg-black">
-                    <img className="mb-[-100px] box-2" src={img} alt="" />
+                    <img className=" lg:mt-[100px] mb-[-100px]  box-2" src={img} alt="" />
                 </div>
                 <div className="flex flex-col text-center text-[20px] gap-10 bg-[#fff]">
                     <div className="  mt-[50px] mx-8 pt-4 font-bold px-4
