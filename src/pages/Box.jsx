@@ -2,7 +2,9 @@ import BoxDetails from "../components/BoxDetails";
 
 function Box(){
     return (
-        <BoxDetails></BoxDetails>
+        <>
+            <BoxDetails></BoxDetails>
+        </>
     );
 };
 
