@@ -1,6 +1,7 @@
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
 import { db } from "../firebase/firebase";
+import QrGenerator from "./QrGenerator"
 
 const NewBoxForm = () => {
 
@@ -58,6 +59,7 @@ const NewBoxForm = () => {
   }
 
   return (
+    <>
     <form>
       {/* nombre de la caja */}
       <div>
@@ -147,9 +149,10 @@ const NewBoxForm = () => {
           name="tipoDeContenido"
           id="tipoDeContenido"
         >
-          <option value="resistente">Resistente</option>
           <option value="fragil">Fragil</option>
           <option value="noTanFragil">No tan fragil</option>
+          <option value="resistente">Resistente</option>
+          <option value="resistente">Muy Resistente</option>
         </select>
 
         {/* <input onChange={handleOnChange} name="tipoDeContenido" type="text" id="tipoDeContenido" /> */}
@@ -179,6 +182,8 @@ const NewBoxForm = () => {
         ))}
       </div>
     </form>
+    <QrGenerator></QrGenerator>
+    </>
   );
 }
 export default NewBoxForm
