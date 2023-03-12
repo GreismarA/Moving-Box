@@ -3,8 +3,7 @@ import "./About.css"
 function About(){
     return(
         <>
-        <section id="nosotros" className="">
-
+        <section id="nosotros">
           <div className="img">
             <div className="fondo">
             <h2 className=" text-[40px] font-bold text-center lg:mr-[700px] py-2">¿Quienes somos?</h2>
@@ -16,4 +15,4 @@ function About(){
     )
 }
 
-export {About}
+export default About;
