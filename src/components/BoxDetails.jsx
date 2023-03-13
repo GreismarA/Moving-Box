@@ -2,7 +2,6 @@ import "../resources/boxDetails.css"
 
 function BoxDetails() {
     return (
-
         <section className="flex flex-col items-center section-box">
             <div className="containerBoxDetails px-4 mt-8 pt-4 pb-8 w-10/12 lg:px-8 xl:w-2/4">
                 <h1 className="text-center text-2xl md:text-4xl font-semibold">Nombre de la Caja</h1>
