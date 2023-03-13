@@ -28,7 +28,7 @@ function QRGenerator() {
   };
 
   return (
-    <div className="container py-14 mt-16">
+    <div className="container-qr py-14 mt-16">
       <img ref={imgRef}/>
       <button onClick={downloadPdf} className="py-6 font-semibold">Download QR Code</button>
     </div>
