@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Box from './pages/Box';
 import Home from './components/pages/home/Home'
-
-import NewBoxForm from "./components/NewBoxForm"
+import NewBoxForm from "./components/NewBoxForm/NewBoxForm"
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
