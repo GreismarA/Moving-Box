@@ -1,4 +1,4 @@
-.container-qr {
+.QrGenerator__container {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -7,7 +7,7 @@
     background-color: #000;
 }
 
-.container button{
+.QrGenerator__container button{
     border: 1px solid rgb(120, 120, 120);
     background-color: #E2E756;
     border-radius: .5rem;
@@ -15,11 +15,11 @@
     justify-items: center;
 }
 
-.container button:hover{
+.QrGenerator__container button:hover{
     background-color: #f5f89f;
 }
 
-.container img {
+.QrGenerator__container img {
     width: 20%;
     border: 1px solid rgb(120, 120, 120);
     border-radius: .5rem;
