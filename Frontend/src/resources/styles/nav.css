@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #000;
-    height: 100px;
+    height: 60px;
 }
 
 .nav_toggle{
@@ -19,21 +19,26 @@
     text-align: center;
     padding: 8px;
     position: relative;
-   
 }
 
 @media (max-width: 768px){
     .nav_items{
         position: absolute;
-        top:60px;
+        top: 60px;
         background-color: #000;
-        left: 0;
+        left: 0px;
         display: flex;
         flex-direction: column;
         width: 100%;
         height: auto;
-        transform: translateX(-100%);
+        transform: translateX(100%);
         transition: all 0.5s;
+        border: 1px solid #e2e756;
+        border-radius: 2px;
+    }
+
+    .nav_items a{
+        margin-right: 0px;
     }
 
     .nav_items a::before{
@@ -63,8 +68,6 @@
        border-radius: 2px;
        transform-origin: 5px 0px;
        transition: all 0.5s;
-
-
     }
 
     .close span{

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Menu from "./Menu.jsx"
-import "./Nav.css"
+import "../resources/styles/nav.css"
 
 function Nav(){
     const [isOpen, setIsOpen] = useState(false);

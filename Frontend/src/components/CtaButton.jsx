@@ -1,4 +1,4 @@
-import '../ctaButton/CtaButton.css'
+import '../resources/styles/ctaButton.css'
 
 function CtaButton(){
   return(

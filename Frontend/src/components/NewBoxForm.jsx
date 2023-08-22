@@ -1,8 +1,8 @@
-import "../NewBoxForm/NewBoxForm.css"
+import "../resources/styles/newBoxForm.css"
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
-import { db } from "../../firebase/firebase";
-import QrGenerator from "../QrGenerator"
+import { db } from "../firebase/firebase";
+import QrGenerator from "./QrGenerator"
 
 const NewBoxForm = () => {
 

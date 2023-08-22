@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import QRCode from 'qrcode';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
-import "../resources/qrGenerator.css"
+import "../resources/styles/qrGenerator.css"
 
 function QRGenerator() {
   const imgRef = useRef(null);

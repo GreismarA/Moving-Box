@@ -1,4 +1,4 @@
-import '../steps/Steps.css'
+import '../resources/styles/steps.css'
 
 function Steps() {
   return (
