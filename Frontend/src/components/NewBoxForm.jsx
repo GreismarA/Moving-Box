@@ -69,7 +69,7 @@ const NewBoxForm = () => {
             <div>
               {/* nombre de la caja */}
               <div className="flex flex-col mb-4  ">
-                <label class="" for="nombre">Nombre</label>
+                <label className="" htmlFor="nombre">Nombre</label>
                 <input className=" border-b border-white bg-black caret-white text-white border-solid outline-none p-[4px]"
                   onChange={handleOnChange}
                   name="nombre"
@@ -189,13 +189,9 @@ const NewBoxForm = () => {
           </form>
         </div>
       </div>
-
-
     <QrGenerator></QrGenerator>
-
     </>
   );
-
-        }
+};
   
 export default NewBoxForm ;

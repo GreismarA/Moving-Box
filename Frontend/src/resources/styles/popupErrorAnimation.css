@@ -1,0 +1,47 @@
+@keyframes decrease {
+  0%{
+    width: 100%;
+  }
+  100%{
+    width: 0;
+  }
+}
+
+.popupError {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -110%;
+  left: 0;
+  right: 0;
+  background-color: black;
+  padding: 0.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  gap: 12px;
+}
+
+.errorOutlineSvg {
+  min-width: 30px;
+}
+
+.popupErrorParagraph {
+  font-size: 12px;
+}
+
+.popupError::after {
+  content: '';
+  width: 100%;
+  height: 5%;
+  background-color: #e75555;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.animationClass::after {
+  animation: decrease 6s linear 1;
+  animation-fill-mode: forwards;
+}
