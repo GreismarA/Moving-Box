@@ -26,7 +26,7 @@ const style = {
     flexDirection: 'column',
     justifyContent: 'space-between'
   },
-  '@media (max-width: 768px) and (orientation: portrait)': {
+  '@media (max-width: 710px) and (orientation: portrait)': {
     position: 'relative',
     top: '50vh',
     left: 0,
@@ -90,7 +90,7 @@ export default function BoxFormPopup({ open, setOpen }) {
   };
   
   return (
-    <Modal open={open} onClose={() => setOpen(false)} keepMounted={true} sx={{ userSelect: 'none' }} >
+    <Modal open={open} onClose={() => setOpen(false)} keepMounted={true} sx={{ userSelect: 'none' }}  >
       <Fade in={open}>
         <Box sx={style}>
           <div>

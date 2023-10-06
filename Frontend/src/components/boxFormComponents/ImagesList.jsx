@@ -80,7 +80,6 @@ export default function ImagesList({ list, setList, children }) {
   
   return (
     <Box sx={BoxStyles(list.length > 0)}>
-      {console.log('renderizando')}
       <ImageList cols={list.length > 0 ? 3 : 1} gap={4} rowHeight={100} >
         {list.length > 0 ? list.map((image, index) => (
           <ImageListItem key={index} sx={{ position: 'relative' }}>
