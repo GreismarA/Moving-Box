@@ -84,13 +84,13 @@ export default function BoxFormPopup({ open, setOpen }) {
   const nextStep = () => {
     if (currentStep < 2) {
       setCurrentStep(currentStep + 1);
-    } else {
+    } else { 
       setSubmit(true);
     }
   };
   
   return (
-    <Modal open={open} onClose={() => setOpen(false)} keepMounted={true} sx={{ userSelect: 'none' }}  >
+    <Modal open={open} onClose={(event, reason) => {reason ? null : setOpen(false)}} keepMounted={true} sx={{ userSelect: 'none' }}  >
       <Fade in={open}>
         <Box sx={style}>
           <div>
