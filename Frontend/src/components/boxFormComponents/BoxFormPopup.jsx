@@ -71,7 +71,7 @@ const style = {
 };
 
 export default function BoxFormPopup({ open, setOpen }) {
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(2);
   const [submit, setSubmit] = useState(false);
   
   const prevStep = () => {

@@ -45,3 +45,17 @@
   animation: decrease 6s linear 1;
   animation-fill-mode: forwards;
 }
+
+.dotlottie-container {
+  width: 250px;
+  height: 250px;
+}
+
+.dotlottie-container svg {
+  width: 250px !important;
+  height: 250px !important;
+}
+
+.dotlottie-container svg path {
+  stroke-width: 70;
+}

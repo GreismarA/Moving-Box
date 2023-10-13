@@ -13,7 +13,6 @@ const BoxStyles = (conditional) => {
       borderRadius: '4px',
       padding: '5px',
       overflowY: 'scroll',
-      marginBottom: '1.5rem',
       '&::-webkit-scrollbar': {
         width: '4px'
       },
@@ -23,6 +22,10 @@ const BoxStyles = (conditional) => {
       '&::-webkit-scrollbar-thumb': {
         backgroundColor: '#E2E756',
         borderRadius: '3px'
+      },
+      '@media (min-width: 769px)': {
+        minHeight: '162px',
+        maxHeight: '315px'
       }
     } 
   : { 
@@ -36,7 +39,6 @@ const BoxStyles = (conditional) => {
       borderRadius: '4px',
       padding: '5px',
       overflowY: 'scroll',
-      marginBottom: '1.5rem',
       '&::-webkit-scrollbar': {
         width: '4px'
       },
@@ -46,6 +48,10 @@ const BoxStyles = (conditional) => {
       '&::-webkit-scrollbar-thumb': {
         backgroundColor: '#E2E756',
         borderRadius: '3px'
+      },
+      '@media (min-width: 769px)': {
+        minHeight: '162px',
+        maxHeight: '315px'
       }
   }
   return styles
@@ -77,23 +83,27 @@ export default function ImagesList({ list, setList, children }) {
   const handleDelete = (imageIndex) => {
     setList((images) => images.filter((image, index) => index !== imageIndex));
   };
+  console.log
   
   return (
-    <Box sx={BoxStyles(list.length > 0)}>
-      <ImageList cols={list.length > 0 ? 3 : 1} gap={4} rowHeight={100} >
-        {list.length > 0 ? list.map((image, index) => (
-          <ImageListItem key={index} sx={{ position: 'relative' }}>
-            <img
-              src={image}
-              alt={`Imagen número ${index + 1}`}
-              loading="lazy"
-              className='max-h-[100px]'
-            />
-            <CancelIcon sx={CancelIconStyles} onClick={() => handleDelete(index)} />
-          </ImageListItem>
-        )) : (children)}
-        {list.length > 0 && list.length < 16 ? (<ImageListItem sx={{ justifyContent: 'center' }}>{children}</ImageListItem>) : null}
-      </ImageList>
-    </Box>
+    <div className='mb-6'>
+      <Box sx={BoxStyles(list.length > 0)}>
+        <ImageList cols={list.length > 0 ? 3 : 1} gap={4} rowHeight={screen.width > 768 ? 150 : 100} >
+          {list.length > 0 ? list.map((image, index) => (
+            <ImageListItem key={index} sx={{ position: 'relative' }}>
+              <img
+                src={image}
+                alt={`Imagen número ${index + 1}`}
+                loading="lazy"
+                className='max-h-[150px]'
+              />
+              <CancelIcon sx={CancelIconStyles} onClick={() => handleDelete(index)} />
+            </ImageListItem>
+          )) : (children)}
+          {list.length > 0 && list.length < 16 ? (<ImageListItem sx={{ justifyContent: 'center' }}>{children}</ImageListItem>) : null}
+        </ImageList>
+      </Box>
+      <span className=' text-[10px] text-[rgba(255,255,255,0.5)]'>Máximo 16 imágenes.</span> 
+    </div>
   );
 };
